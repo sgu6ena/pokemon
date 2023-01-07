@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body{
-  @apply bg-gray-700 text-amber-50;
+  @apply bg-gray-700 text-amber-50 text-xs;
+  font-size: 20px;
 }

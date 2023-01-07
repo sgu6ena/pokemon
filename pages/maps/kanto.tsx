@@ -1,6 +1,9 @@
 import {NextPage} from "next";
-import KantoMap from "../../src/components/screens/kanto";
+import dynamic from 'next/dynamic'
 
+const KantoMap = dynamic(() => import('../../src/components/screens/kanto'), {
+  loading: () => <p>'Loading...'</p>,
+})
 const MyComponent: NextPage = () => {
   return (
     <KantoMap/>
