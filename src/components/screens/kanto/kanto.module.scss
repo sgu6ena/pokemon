@@ -1,8 +1,13 @@
 .kanto {
+  @apply flex flex-shrink-0 flex-grow-0;
 
+  p{
+    line-height: 1.1;
+    margin-top: 20px;
+  }
   svg g {
     fill: #4499a9;
-    fill-opacity: 0.6;
+    fill-opacity: 0.9;
   }
 
   svg g:hover {
@@ -10,30 +15,9 @@
     fill-opacity: 0.7;
   }
 
-  svg g:hover text {
+  svg g.hexagon:hover text {
     fill-opacity: 1;
   }
-
-  svg g.q .hexagon {
-    fill: Red;
-    fill-opacity: 0.4;
-  }
-
-  svg g.r .hexagon {
-    fill: Green;
-    fill-opacity: 0.4;
-  }
-
-  svg g.s .hexagon {
-    fill: Blue;
-    fill-opacity: 0.4;
-  }
-
-  svg g.active .hexagon {
-    fill: Coral;
-    fill-opacity: 0.9;
-  }
-
   svg g polygon {
     stroke: #7be3f6;
     stroke-width: 0.2;
@@ -41,9 +25,9 @@
   }
 
   svg g text {
-    font-size: 0.1em;
+    font-size: 0.08em;
     fill: white;
-    fill-opacity: 0.7;
+    fill-opacity: 0.4;
     transition: fill-opacity .5s;
     width: 50px;
   }
