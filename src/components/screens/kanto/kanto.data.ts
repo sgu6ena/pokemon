@@ -137,15 +137,15 @@ export const hexagons: hex[] = [
 export const patterns = {
   'forest':'/maps/kanto/sgu6enka_forest_texture_for_the_game_top_view_isometric_forest__3e4aa9a6-d8f3-451d-81cc-c65af867fc03.png',
   'glade':'/maps/kanto/2.png',
-  'water':'/maps/kanto/water.jpg',
+  'water':'/maps/kanto/11111.jpg',
   'pesok':'/maps/kanto/pesok.jpg'
 }
 
 
 export const config = {
-  "width": 950,
+  "width": 1100,
   "height": 800,
-  "layout": {"width": 8, "height": 8, "flat": true, "spacing": 1},
+  "layout": {"width": 10, "height": 10 , "flat": true, "spacing": 1},
   "origin": {"x": -50, "y": -48},
 }
 
