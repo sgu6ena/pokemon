@@ -4,15 +4,29 @@ import {IAreal} from "./areals.type";
 export const arealAPI = createApi({
         reducerPath: 'arealAPI',
         baseQuery: fetchBaseQuery({
-            baseUrl: 'http://127.0.0.1:8000/api',
+            baseUrl: process.env.NEXT_PUBLIC_SERVER_API,
         }),
 
         endpoints: (builder) => ({
             fetchAllAreals: builder.query<IAreal[], void>({
                 query: () =>`/areals`
+            }),
+            fetchAllArealsWithHexagons: builder.query<IAreal[], void>({
+                query: () =>`/areals/hexagons`
+            }),
+            fetchArealById: builder.query<IAreal[], string>({
+                query: (id) =>`/areals/${id}`
+            }),
+            createArial:builder.mutation<IAreal,FormData>({
+                query:(areal)=>({
+                    url:`/areals`,
+                    method:'POST',
+                    body:areal
+                } )
             })
+
         })
     }
 )
 
-export const {useFetchAllArealsQuery} = arealAPI
+export const {useFetchAllArealsQuery, useFetchArealByIdQuery, useFetchAllArealsWithHexagonsQuery} = arealAPI
